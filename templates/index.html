@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Analysis Tool</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Code Analysis Tool</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="code_file">Upload Code File:[.cpp, .java, .txt, .py, .c] </label>
+            <input type="file" name="code_file" id="code_file">
+            <span>or</span>
+            <label for="code_snippet">Paste Code Snippet:</label>
+            <textarea name="code_snippet" id="code_snippet" rows="10" placeholder="Paste your code here..."></textarea>
+            
+            <button type="submit">Analyze Code</button>
+        </form>
+
+        {% if analysis_result %}
+        <div class="result">
+            <h2>Analysis Result:</h2>
+            <pre>{{ analysis_result | safe }}</pre>
+        </div>
+        {% elif error_message %}
+        <div class="error">
+            <p>{{ error_message }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

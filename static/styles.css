@@ -1,0 +1,134 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px; /* Limits the width */
+    margin: 50px auto; /* Centers the container */
+    padding: 20px;
+    background-color: #252526;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #569cd6;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px; /* Adds spacing below the form */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input and Textarea Styling */
+input[type="file"],
+textarea {
+    width: 100%;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Adds spacing between form elements */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button Styling */
+button {
+    background-color: #569cd6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4780b3;
+}
+
+/* Result and Error Box Styling */
+.result,
+.error {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #333333;
+    border-radius: 4px;
+    overflow-x: auto; /* Ensures long text/code doesn't break the layout */
+    max-width: 95%; /* Adds some width constraint */
+    margin-left: auto; /* Centers horizontally */
+    margin-right: auto;
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Heading inside result/error */
+.result h2,
+.error h2 {
+    margin-top: 0;
+    color: #b5cea8;
+}
+
+/* Code Block Styling */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5; /* Improves readability for code */
+    margin-top: 10px;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 20px auto; /* Adjusts margin for smaller screens */
+        padding: 15px; /* Slightly reduces padding */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .result,
+    .error {
+        padding: 10px;
+        font-size: 0.95rem; /* Adjusts font size on smaller screens */
+    }
+}

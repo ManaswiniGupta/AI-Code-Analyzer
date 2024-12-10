@@ -1,0 +1,6 @@
+python_dotenv
+langchain_groq
+Flask
+gunicorn
+markdown
+pygments
